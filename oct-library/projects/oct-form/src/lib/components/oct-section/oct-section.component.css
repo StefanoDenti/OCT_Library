@@ -1,7 +1,11 @@
 .section {
+  position: relative;
   width: 100%;
   margin: 5%;
   padding: 10px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
 }
 
 .section-black-lite {
@@ -12,6 +16,7 @@
 .section-black-lite,
 .title {
   font-size: 2rem;
+  text-align: center;
 }
 
 .field {

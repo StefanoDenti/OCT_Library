@@ -9,7 +9,7 @@ import { takeUntil } from 'rxjs/operators';
   templateUrl: './oct-form.component.html',
 })
 export class OctFormComponent implements OnInit, OnDestroy {
-  public form: OctFormModel;
+  public form: OctFormModel = null;
 
   private $onDestroing: Subject<any> = new Subject<any>();
 
