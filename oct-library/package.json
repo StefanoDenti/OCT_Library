@@ -1,5 +1,8 @@
 {
   "name": "oct-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "version": "1.0.0",
   "author": "Denti Stefano",
   "description": "Angular collection of libraries.",
@@ -21,7 +24,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~10.0.2",
     "@angular/common": "~10.0.2",

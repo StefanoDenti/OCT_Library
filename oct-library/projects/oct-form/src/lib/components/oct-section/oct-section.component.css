@@ -1,0 +1,18 @@
+.section {
+  width: 100%;
+  margin: 5%;
+  padding: 10px;
+}
+
+.section-black-lite {
+  border: 2px solid #333;
+  background-color: rgb(212, 204, 204);
+}
+
+.section-black-lite,
+.title {
+  font-size: 2rem;
+}
+
+.field {
+}

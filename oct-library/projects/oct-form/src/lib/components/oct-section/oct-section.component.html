@@ -1,0 +1,23 @@
+<div [class]="section.class">
+  <span class="title">{{ section.title }}</span>
+
+  <div class="field" *ngFor="let field of section?.fields">
+    <oct-field [field]="field"></oct-field>
+  </div>
+  <div class="buttons">
+    <button
+      *ngIf="section.nextBtn"
+      [style]="section.nextBtn.style"
+      [class]="section.nextBtn.class"
+    >
+      {{ section.nextBtn.text }}
+    </button>
+    <button
+      *ngIf="section.prevBtn"
+      [style]="section.prevBtn.style"
+      [class]="section.prevBtn.class"
+    >
+      {{ section.prevBtn.text }}
+    </button>
+  </div>
+</div>

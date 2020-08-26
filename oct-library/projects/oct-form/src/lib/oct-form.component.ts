@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { OctFormModel } from './models/core/oct-form.model';
+import { OctFormService } from './oct-form.service';
 
 @Component({
-  selector: 'lib-oct-form',
-  template: `
-    <p>
-      oct-form works!
-    </p>
-  `,
+  selector: 'oct-form',
+  templateUrl: './oct-form.component.html',
   styles: [
-  ]
+  ],
+  providers: [OctFormService]
 })
 export class OctFormComponent implements OnInit {
-
-  constructor() { }
+  constructor(public _formService: OctFormService) { }
 
   ngOnInit(): void {
+
   }
 
 }

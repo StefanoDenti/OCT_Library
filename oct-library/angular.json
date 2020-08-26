@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/oct-form",
       "sourceRoot": "projects/oct-form/src",
-      "prefix": "lib",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -36,13 +36,12 @@
               "projects/oct-form/tsconfig.lib.json",
               "projects/oct-form/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
-    }},
+    }
+  },
   "cli": {
     "analytics": "ba2297c8-5d6b-4f33-8195-63fdfb1b6e5d"
   },

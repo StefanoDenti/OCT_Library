@@ -1,0 +1,31 @@
+<span [ngSwitch]="field.type">
+  <label>{{ field.label }}</label>
+  <input
+    *ngSwitchCase="'text'"
+    #i
+    [type]="field.type"
+    [name]="field.name"
+    [required]="field.validation.required"
+    [maxlength]="field.validation.max"
+    [minLenght]="field.validation.min"
+    [(ngModel)]="value"
+  />
+  <input
+    *ngSwitchCase="'number'"
+    #i
+    [type]="field.type"
+    [name]="field.name"
+    [required]="field.validation.required"
+    [max]="field.validation.max"
+    [min]="field.validation.min"
+    [(ngModel)]="value"
+  />
+  <textarea
+    *ngSwitchCase="'textArea'"
+    #i
+    [name]="field.name"
+    [(ngModel)]="value"
+  >
+  </textarea>
+  <p class="error" *ngIf="i">{{ i | json }}</p>
+</span>
