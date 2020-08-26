@@ -8,7 +8,7 @@ import { OctFormService } from '../../oct-form.service';
   styleUrls: ['./oct-section.component.css']
 })
 export class OctSectionComponent implements OnInit {
-  @Input() section: OctSectionModel;
+  @Input() section: OctSectionModel = null;
 
   constructor(public _formService: OctFormService) { }
 

@@ -17,11 +17,11 @@ export class OctFieldComponent implements OnInit {
   }
 
   setValue(): void {
-    const indexSection = this._formService.form.sections.findIndex(s => s.id === this.field.sectionId);
-    if (indexSection !== -1) {
-      const indexField = this._formService.form.sections[indexSection].fields.findIndex(f => f.id = this.field.id);
-      this._formService.form.sections[indexSection].fields[indexField].value = this.value;
-    }
+    // const indexSection = this._formService.form.sections.findIndex(s => s.id === this.field.sectionId);
+    // if (indexSection !== -1) {
+    //   const indexField = this._formService.form.sections[indexSection].fields.findIndex(f => f.id = this.field.id);
+    //   this._formService.form.sections[indexSection].fields[indexField].value = this.value;
+    // }
   }
 
 }

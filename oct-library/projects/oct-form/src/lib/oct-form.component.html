@@ -1,3 +1,5 @@
-<div class="section" *ngFor="let section of _formService.form?.sections">
-  <oct-section [section]="section"></oct-section>
+<div *ngIf="form">
+  <div class="section" *ngFor="let section of form?.sections">
+    <oct-section [section]="section"></oct-section>
+  </div>
 </div>

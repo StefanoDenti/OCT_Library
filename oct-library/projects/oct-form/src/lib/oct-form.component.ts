@@ -1,19 +1,33 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { OctFormModel } from './models/core/oct-form.model';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { OctFormService } from './oct-form.service';
+import { OctFormModel } from './models/core/oct-form.model';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'oct-form',
   templateUrl: './oct-form.component.html',
-  styles: [
-  ],
-  providers: [OctFormService]
 })
-export class OctFormComponent implements OnInit {
-  constructor(public _formService: OctFormService) { }
+export class OctFormComponent implements OnInit, OnDestroy {
+  public form: OctFormModel;
 
-  ngOnInit(): void {
-    console.log('init');
+  private $onDestroing: Subject<any> = new Subject<any>();
+
+  constructor(public _formService: OctFormService) {
+
+    this._formService.$formChange.pipe(
+      takeUntil(this.$onDestroing)
+    ).subscribe(form => {
+      if (form) {
+        this.form = form;
+      }
+    });
   }
 
+  ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
+    this.$onDestroing.next();
+  }
 }
