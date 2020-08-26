@@ -2,14 +2,15 @@
   "name": "oct-library",
   "version": "1.0.0",
   "author": "Denti Stefano",
+  "description": "Angular collection of libraries.",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/StefanoDenti/OCT_Library.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/StefanoDenti/OCT_Library/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/StefanoDenti/OCT_Library",
   "keywords": [],
   "license": "",
   "scripts": {
