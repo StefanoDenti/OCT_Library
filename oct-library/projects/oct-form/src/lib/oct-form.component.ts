@@ -13,7 +13,7 @@ export class OctFormComponent implements OnInit {
   constructor(public _formService: OctFormService) { }
 
   ngOnInit(): void {
-
+    console.log('init');
   }
 
 }
