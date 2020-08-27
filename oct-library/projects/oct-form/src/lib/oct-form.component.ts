@@ -7,6 +7,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'oct-form',
   templateUrl: './oct-form.component.html',
+  styleUrls: ['./oct-form.component.scss']
 })
 export class OctFormComponent implements OnInit, OnDestroy {
   public form: OctFormModel = null;

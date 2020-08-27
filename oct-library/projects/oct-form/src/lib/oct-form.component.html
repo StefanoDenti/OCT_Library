@@ -1,5 +1,8 @@
-<div *ngIf="form">
-  <div class="section" *ngFor="let section of form?.sections">
-    <oct-section [section]="section"></oct-section>
+<ng-container *ngIf="form">
+  <div [class]="form.class">
+    <h2 class="title">{{ form.title }}</h2>
+    <div class="sections" *ngFor="let section of form?.sections">
+      <oct-section [section]="section"></oct-section>
+    </div>
   </div>
-</div>
+</ng-container>

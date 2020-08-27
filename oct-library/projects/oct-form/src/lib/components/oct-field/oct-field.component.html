@@ -1,27 +1,19 @@
 <ng-container *ngIf="field">
   <span [ngSwitch]="field.type">
-    <label>{{ field.label }}</label>
-    <input
-      *ngSwitchCase="'text'"
-      #i
-      [type]="field.type"
-      [name]="field.name"
-      [required]="field.validation?.required"
-      [max]="field.validation?.max"
-      [min]="field.validation?.min"
-      [value]="field.value"
-    />
-    <input
-      *ngSwitchCase="'number'"
-      #i
-      [type]="field.type"
-      [name]="field.name"
-      [required]="field.validation?.required"
-      [max]="field.validation?.max"
-      [min]="field.validation?.min"
-      [value]="field.value"
-    />
-    <textarea *ngSwitchCase="'textArea'" #i [name]="field.name" [value]="field.value"> </textarea>
-    <p class="error" *ngIf="i">{{ i | json }}</p>
+    <mat-form-field class="oct-form-field" [class]="field.class" [style]="field.style" *ngSwitchCase="'text'" [appearance]="field.appearance">
+      <mat-label>{{ field.label }}</mat-label>
+      <mat-icon matPrefix *ngIf="field.icon" class="icon">{{ field.icon }}</mat-icon>
+      <input matInput #i [type]="field.type" [name]="field.name" [placeholder]="field.placeholder" [formControl]="input" />
+      <mat-hint class="error">{{ getErrorMessage() }}</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="oct-form-field" *ngSwitchCase="'number'" [appearance]="field.appearance">
+      <mat-label>{{ field.label }}</mat-label>
+      <mat-icon matPrefix *ngIf="field.icon" class="icon">{{ field.icon }}</mat-icon>
+      <input matInput #i [type]="field.type" [name]="field.name" [placeholder]="field.placeholder" [formControl]="input" />
+      <mat-hint class="error">{{ getErrorMessage() }}</mat-hint>
+    </mat-form-field>
+
+    <textarea *ngSwitchCase="'textArea'" #i [name]="field.name" [value]="field.value" class="oct-form-field"> </textarea>
   </span>
 </ng-container>

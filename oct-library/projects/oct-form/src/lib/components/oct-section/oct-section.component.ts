@@ -13,5 +13,6 @@ export class OctSectionComponent implements OnInit {
   constructor(public _formService: OctFormService) { }
 
   ngOnInit(): void {
+    console.log("SECTION", this.section)
   }
 }

@@ -1,23 +1,37 @@
-.section {
-  position: relative;
-  width: 100%;
-  margin: 5%;
-  padding: 10px;
-  overflow-y: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+.section-hilighted {
+  border: 1px solid #ccc;
+  background-color: rgb(246, 248, 132);
+  margin: 1%;
 }
 
-.section-black-lite {
-  border: 2px solid #333;
-  background-color: rgb(212, 204, 204);
+.section-lite {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin: 1%;
 }
 
-.section-black-lite,
+.section-transparent {
+  border: 0;
+  background-color: transparent;
+  margin: 1%;
+}
 .title {
-  font-size: 2rem;
+  padding: 10px;
+  font-size: 1rem;
   text-align: center;
 }
-
-.field {
+.content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttons {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }

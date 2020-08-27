@@ -1,15 +1,18 @@
-<div [class]="section.class" class="section">
-  <span class="title">{{ section.name }}</span>
-
-  <div class="field" *ngFor="let field of section?.fields">
-    <oct-field [field]="field"></oct-field>
+<div [class]="section.class">
+  <div class="title">{{ section.name }}</div>
+  <div class="content">
+    <form>
+      <ng-container *ngFor="let field of section?.fields">
+        <oct-field [field]="field"></oct-field>
+      </ng-container>
+    </form>
   </div>
   <div class="buttons">
-    <button *ngIf="section.nextBtn" [style]="section.nextBtn.style" [class]="section.nextBtn.class">
-      {{ section.nextBtn.text }}
-    </button>
-    <button *ngIf="section.prevBtn" [style]="section.prevBtn.style" [class]="section.prevBtn.class">
+    <button mat-raised-button *ngIf="section.prevBtn" [style]="section.prevBtn.style" [class]="section.prevBtn.class">
       {{ section.prevBtn.text }}
+    </button>
+    <button mat-raised-button *ngIf="section.nextBtn" [style]="section.nextBtn.style" [class]="section.nextBtn.class">
+      {{ section.nextBtn.text }}
     </button>
   </div>
 </div>
